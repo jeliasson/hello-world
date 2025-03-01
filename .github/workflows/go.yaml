@@ -1,0 +1,24 @@
+name: Go
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/go.yaml'
+      - 'hello-world/go/hello-world.go'
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        run: make go
