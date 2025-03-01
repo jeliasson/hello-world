@@ -1,0 +1,29 @@
+name: Bash
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/bash.yaml'
+      - 'hello-world/bash/hello-world.sh'
+
+jobs:
+  build:
+    name: Bash
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          sparse-checkout: |
+            hello-world/bash
+
+      - name: Run
+        working-directory: hello-world/bash
+        run: |
+          bash ./hello-world.sh
