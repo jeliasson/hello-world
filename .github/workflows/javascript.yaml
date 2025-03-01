@@ -1,0 +1,24 @@
+name: JavaScript
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/javascript.yaml'
+      - 'hello-world/javascript/hello-world.js'
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        run: make javascript
