@@ -1,0 +1,24 @@
+name: TypeScript
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/typescript.yaml'
+      - 'hello-world/typescript/hello-world.ts'
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        run: make typescript
