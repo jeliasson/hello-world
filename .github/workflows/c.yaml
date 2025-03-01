@@ -13,27 +13,12 @@ on:
 
 jobs:
   build:
-    name: C
+    name: Test
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          sparse-checkout: |
-            hello-world/c
 
-      - name: Build
-        working-directory: hello-world/c
-        run: |
-          gcc hello-world.c -o hello-world
-
-      - name: Executable
-        working-directory: hello-world/c
-        run: |
-          chmod +x hello-world
-
-      - name: Run
-        working-directory: hello-world/c
-        run: |
-          ./hello-world
+      - name: Test
+        run: make c
