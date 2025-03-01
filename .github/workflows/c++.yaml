@@ -1,0 +1,39 @@
+name: C++
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/c++.yaml'
+      - 'hello-world/c++/hello-world.cpp'
+
+jobs:
+  build:
+    name: C++
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          sparse-checkout: |
+            hello-world/c++
+
+      - name: Build
+        working-directory: hello-world/c++
+        run: |
+          cpp hello-world.cpp -o hello-world
+
+      - name: Executable
+        working-directory: hello-world/c++
+        run: |
+          chmod +x hello-world
+
+      - name: Run
+        working-directory: hello-world/c++
+        run: |
+          ./hello-world
