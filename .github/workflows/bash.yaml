@@ -13,17 +13,12 @@ on:
 
 jobs:
   build:
-    name: Bash
+    name: Test
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          sparse-checkout: |
-            hello-world/bash
 
-      - name: Run
-        working-directory: hello-world/bash
-        run: |
-          bash ./hello-world.sh
+      - name: Test
+        run: make bash
