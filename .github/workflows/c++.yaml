@@ -8,8 +8,8 @@ on:
       - fix/**
 
     paths:
-      - '.github/workflows/c++.yaml'
-      - 'hello-world/c++/hello-world.cpp'
+      - '.github/workflows/cpp.yaml'
+      - 'hello-world/cpp/hello-world.cpp'
 
 jobs:
   build:
@@ -21,19 +21,19 @@ jobs:
         uses: actions/checkout@v2
         with:
           sparse-checkout: |
-            hello-world/c++
+            hello-world/cpp
 
       - name: Build
-        working-directory: hello-world/c++
+        working-directory: hello-world/cpp
         run: |
           cpp hello-world.cpp -o hello-world
 
       - name: Executable
-        working-directory: hello-world/c++
+        working-directory: hello-world/cpp
         run: |
           chmod +x hello-world
 
       - name: Run
-        working-directory: hello-world/c++
+        working-directory: hello-world/cpp
         run: |
           ./hello-world
