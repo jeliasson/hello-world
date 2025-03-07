@@ -1,10 +1,12 @@
-all: clean build executable run
+.SILENT:
+
+all: clean build prepare run
 
 clean:
 
 build:
 
-executable:
+prepare:
 
 run:
 	echo "Not supported."

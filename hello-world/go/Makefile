@@ -1,4 +1,6 @@
-all: clean build executable run
+.SILENT:
+
+all: clean build prepare run
 
 clean:
 	rm -f ./hello-world
@@ -6,7 +8,7 @@ clean:
 build:
 	go build hello-world.go
 
-executable:
+prepare:
 	chmod +x ./hello-world
 
 run:
