@@ -1,10 +1,10 @@
-all: clean build executable run
+all: clean build prepare run
 
 clean:
 
 build:
 
-executable:
+prepare:
 	chmod +x ./hello-world.sh
 
 run:

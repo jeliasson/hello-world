@@ -1,4 +1,4 @@
-all: clean build executable run
+all: clean build prepare run
 
 clean:
 	rm -f ./hello-world
@@ -6,7 +6,7 @@ clean:
 build:
 	gcc hello-world.c -o hello-world
 
-executable:
+prepare:
 	chmod +x ./hello-world
 
 run:

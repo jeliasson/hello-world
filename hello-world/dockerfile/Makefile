@@ -1,4 +1,4 @@
-all: clean build executable run
+all: clean build prepare run
 
 clean:
 	- docker image rm hello-world
@@ -6,8 +6,7 @@ clean:
 build:
 	docker build -f hello-world.Dockerfile -t hello-world .
 
-executable:
-
+prepare:
 
 run:
 	docker run --rm hello-world
