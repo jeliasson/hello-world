@@ -1,3 +1,5 @@
+.SILENT:
+
 all: clean build prepare run
 
 clean:
