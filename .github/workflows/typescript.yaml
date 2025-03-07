@@ -20,5 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        uses: denoland/setup-deno@v2
+
       - name: Test
         run: make typescript
