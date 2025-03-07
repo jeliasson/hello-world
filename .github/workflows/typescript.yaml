@@ -1,4 +1,4 @@
-name: C++
+name: TypeScript
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
       - fix/**
 
     paths:
-      - '.github/workflows/cpp.yaml'
-      - 'hello-world/cpp/**'
+      - '.github/workflows/typescript.yaml'
+      - 'hello-world/typescript/**'
 
 jobs:
   build:
@@ -20,5 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        uses: denoland/setup-deno@v2
+
       - name: Test
-        run: make cpp
+        run: make typescript

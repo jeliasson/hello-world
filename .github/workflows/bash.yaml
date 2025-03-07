@@ -9,7 +9,7 @@ on:
 
     paths:
       - '.github/workflows/bash.yaml'
-      - 'hello-world/bash/hello-world.sh'
+      - 'hello-world/bash/**'
 
 jobs:
   build:
