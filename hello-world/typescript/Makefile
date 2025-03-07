@@ -7,4 +7,4 @@ build:
 executable:
 
 run:
-	deno hello-world.js
+	deno hello-world.ts
