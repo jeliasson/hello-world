@@ -9,7 +9,7 @@ on:
 
     paths:
       - '.github/workflows/go.yaml'
-      - 'hello-world/go/hello-world.go'
+      - 'hello-world/go/**'
 
 jobs:
   build:

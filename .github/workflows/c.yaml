@@ -9,7 +9,7 @@ on:
 
     paths:
       - '.github/workflows/c.yaml'
-      - 'hello-world/c/hello-world.c'
+      - 'hello-world/c/**'
 
 jobs:
   build:

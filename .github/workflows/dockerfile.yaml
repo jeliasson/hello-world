@@ -9,7 +9,7 @@ on:
 
     paths:
       - '.github/workflows/dockerfile.yaml'
-      - 'hello-world/dockerfile/hello-world.dockerfile'
+      - 'hello-world/dockerfile/**'
 
 jobs:
   build:
