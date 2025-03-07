@@ -1,0 +1,27 @@
+name: HTML
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/html.yaml'
+      - 'hello-world/html/**'
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: sudo apt install -y lynx
+
+      - name: Test
+        run: make html
