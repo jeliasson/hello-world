@@ -1,8 +1,6 @@
 .SILENT:
 
-all: clean build prepare run
-
-clean:
+all: build prepare run clean
 
 build:
 
@@ -11,3 +9,5 @@ prepare:
 
 run:
 	bash ./hello-world.sh
+
+clean:

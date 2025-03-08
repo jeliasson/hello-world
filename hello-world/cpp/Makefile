@@ -1,9 +1,6 @@
 .SILENT:
 
-all: clean build prepare run
-
-clean:
-	rm -f ./hello-world
+all: build prepare run clean
 
 build:
 	g++ hello-world.cpp -o hello-world
@@ -13,3 +10,6 @@ prepare:
 
 run:
 	./hello-world
+
+clean:
+	rm -f ./hello-world
