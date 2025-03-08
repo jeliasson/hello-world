@@ -1,0 +1,24 @@
+name: Python
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/python.yaml'
+      - 'hello-world/python/**'
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        run: make python
