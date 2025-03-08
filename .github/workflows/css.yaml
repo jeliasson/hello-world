@@ -1,0 +1,27 @@
+name: CSS
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - fix/**
+
+    paths:
+      - '.github/workflows/css.yaml'
+      - 'hello-world/css/**'
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: sudo apt install -y lynx
+
+      - name: Test
+        run: make css
