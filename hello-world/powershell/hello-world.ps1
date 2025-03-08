@@ -1,2 +1,1 @@
-@echo off
-echo Hello, World!
+Write-Host "Hello, World!"
