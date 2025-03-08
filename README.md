@@ -1,4 +1,6 @@
-# hello-world
+# `Hello, World!`
+
+An over-engineered "[Hello, World!](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)" repository for various computer languages I have used in one way or another, past or present.
 
 | Language                             | Pipeline                                                                                                                                                                                      |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
