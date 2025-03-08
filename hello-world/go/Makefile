@@ -1,9 +1,6 @@
 .SILENT:
 
-all: clean build prepare run
-
-clean:
-	rm -f ./hello-world
+all: build prepare run clean
 
 build:
 	go build hello-world.go
@@ -13,3 +10,6 @@ prepare:
 
 run:
 	./hello-world
+
+clean:
+	rm -f ./hello-world

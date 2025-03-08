@@ -2,9 +2,6 @@
 
 all: build prepare run clean
 
-clean:
-	rm -rf .terraform* terraform.tfstate*
-
 build:
 
 prepare:
@@ -12,3 +9,6 @@ prepare:
 
 run:
 	terraform apply -auto-approve
+
+clean:
+	rm -rf .terraform* terraform.tfstate*
