@@ -1,6 +1,9 @@
 name: SQL
 
 on:
+  schedule:
+    - cron: '0 6 * * 1'
+
   push:
     branches:
       - main
